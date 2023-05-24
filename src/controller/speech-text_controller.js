@@ -39,7 +39,7 @@ transcribeService.startTranscriptionJob(params, (err, data) => {
       res.status(500).json({ error: err?.message,success:false,status:"Failed"});
     } else {
 
-      res.json({ jobId: data.TranscriptionJob.TranscriptionJobName,text:data });
+      res.json({ jobId: data.TranscriptionJob.TranscriptionJobName,text:data,success:true,status:"Success" });
     }
   });
       
